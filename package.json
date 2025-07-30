@@ -76,10 +76,6 @@
         "security": {
           "description": "Mejorar o corregir vulnerabilidades de seguridad",
           "emoji": "🔒"
-        },
-        "init": {
-          "description": "Agregar la configuración inicial del proyecto",
-          "emoji": "🎉"
         }
       }
     }
