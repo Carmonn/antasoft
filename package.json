@@ -1,0 +1,87 @@
+{
+  "name": "antasoft",
+  "version": "1.0.0",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "cm": "cz",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "commitizen": "^4.3.1",
+    "commitlint-config-gitmoji": "^2.3.1",
+    "cz-emoji-conventional": "^1.2.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2"
+  },
+  "lint-staged": {
+    "frontend/src/**/*.{js,ts,vue}": [
+      "npm --prefix frontend run format",
+      "npm --prefix frontend run lint"
+    ],
+
+    "backend/src/**/*.{js,ts}": [
+      "npm --prefix backend run format",
+      "npm --prefix backend run lint"
+    ],
+
+    "docs/src/**/*.{js,ts,vue,md}": [
+      "npm --prefix docs run format",
+      "npm --prefix docs run lint"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-emoji-conventional",
+      "types": {
+        "feat": {
+          "description": "Añadir una nueva funcionalidad o característica",
+          "emoji": "🚀"
+        },
+        "fix": {
+          "description": "Corregir errores que afectan el funcionamiento",
+          "emoji": "🐞"
+        },
+        "docs": {
+          "description": "Actualizar o mejorar la documentación",
+          "emoji": "📝"
+        },
+        "style": {
+          "description": "Cambios de formato que no afectan el código",
+          "emoji": "🎨"
+        },
+        "refactor": {
+          "description": "Reorganizar código sin cambiar su funcionalidad",
+          "emoji": "♻️"
+        },
+        "build": {
+          "description": "Cambios en el sistema de construcción o dependencias",
+          "emoji": "🏗️"
+        },
+        "chore": {
+          "description": "Tareas de mantenimiento sin cambios al código",
+          "emoji": "🔧"
+        },
+        "revert": {
+          "description": "Revertir un cambio anterior en el proyecto",
+          "emoji": "⏪"
+        },
+        "security": {
+          "description": "Mejorar o corregir vulnerabilidades de seguridad",
+          "emoji": "🔒"
+        },
+        "init": {
+          "description": "Agregar la configuración inicial del proyecto",
+          "emoji": "🎉"
+        }
+      }
+    }
+  }
+}

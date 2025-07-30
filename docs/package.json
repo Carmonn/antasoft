@@ -1,0 +1,28 @@
+{
+  "name": "antasoft-docs",
+  "version": "0.0.0",
+  "author": "Luis Enrique Carmona Beltran (GitHub: Carmonn)",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "lint": "eslint . --fix",
+    "lint:check": "eslint .",
+    "format": "prettier --write \".vitepress/**/*.{ts,js,vue,css}\" \"src/**/*.md\" \"*.{ts,js,json}\"",
+    "cm": "npm --prefix ../ run cm"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "eslint": "^9.32.0",
+    "eslint-plugin-markdown": "^5.1.0",
+    "eslint-plugin-vue": "^10.3.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3",
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.18",
+    "vue-eslint-parser": "^10.2.0"
+  }
+}
