@@ -13,8 +13,7 @@ export default {
         'build',
         'chore',
         'revert',
-        'security',
-        'init',
+        'security'
       ],
     ],
   },

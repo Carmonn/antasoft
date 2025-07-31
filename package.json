@@ -7,7 +7,11 @@
   },
   "scripts": {
     "cm": "cz",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "begin": "npm install && npm run prepare && npm run begin_frontend && npm run begin_backend && npm run begin_docs",
+    "begin_frontend": "npm --prefix frontend run begin",
+    "begin_backend": "npm --prefix backend run begin",
+    "begin_docs": "npm --prefix docs run begin"
   },
   "keywords": [],
   "author": "",
@@ -76,10 +80,6 @@
         "security": {
           "description": "Mejorar o corregir vulnerabilidades de seguridad",
           "emoji": "🔒"
-        },
-        "init": {
-          "description": "Agregar la configuración inicial del proyecto",
-          "emoji": "🎉"
         }
       }
     }

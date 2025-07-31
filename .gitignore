@@ -31,3 +31,7 @@ package-lock.json
 
 # Husky
 .husky/_
+
+# Cache de VitePress
+**/.cache
+**/cache
