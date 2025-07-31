@@ -15,7 +15,8 @@
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
-    "cm": "npm --prefix ../ run cm"
+    "cm": "npm --prefix ../ run cm",
+    "begin": "npm install"
   },
   "dependencies": {
     "pinia": "^3.0.3",
