@@ -5,25 +5,32 @@ export default defineConfig({
   title: "Antasoft-Docs",
   description: "Documentación para Antasoft",
   srcDir: "src",
+  cleanUrls: true,
+  
+  head: [
+    ['link', { rel: 'icon', href: '/assets/icon/sistemIcon.ico' }]
+  ],
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
-      { text: "Examples", link: "/markdown-examples" },
+      { text: "Frontend", link: "/frontend" },
+      { text: "Backend", link: "/backend" },
     ],
 
     sidebar: [
       {
-        text: "Examples",
+        text: "Introducción",
         items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
+          { text: "¿Qué es Antasoft?", link: "/introduccion/que-es-antasoft" },
+          { text: "Arquitectura y tecnologías", link: "/introduccion/arquitectura-tecnologias" },
         ],
       },
     ],
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+      { icon: "github", link: "https://github.com/Carmonn/antasoft.git" },
     ],
   },
 });

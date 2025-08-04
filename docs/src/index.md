@@ -3,13 +3,13 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "Antasoft-Docs"
+  text: "Documentación"
+  tagline: Documentación de todo el sistema antasoft
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: ¿Qué es antasoft?
+      link: /introduccion/que-es-antasoft
     - theme: alt
       text: API Examples
       link: /api-examples
