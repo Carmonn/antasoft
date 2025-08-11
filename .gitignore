@@ -35,3 +35,6 @@ package-lock.json
 # Cache de VitePress
 **/.cache
 **/cache
+
+# Variables de entorno
+.env
