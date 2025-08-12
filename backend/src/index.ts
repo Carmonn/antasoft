@@ -1,7 +1,12 @@
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
+import entidadRoutes from "./routes/entidadRoutes.js";
+import municipioRoutes from "./routes/municipioRoutes.js";
 
 const app = new Hono();
+
+app.route("/entidades", entidadRoutes);
+app.route("/municipios", municipioRoutes);
 
 app.get("/", (c) => {
   return c.text("Hello Hono!");
