@@ -6,7 +6,8 @@ export default defineConfig({
   description: "Documentación para Antasoft",
   srcDir: "src",
   cleanUrls: true,
-  
+  lang: "es",
+
   head: [
     ['link', { rel: 'icon', href: '/assets/icon/sistemIcon.ico' }]
   ],
@@ -14,9 +15,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: "Home", link: "/" },
-      { text: "Frontend", link: "/frontend" },
-      { text: "Backend", link: "/backend" },
+      { text: "Inicio", link: "/" }
     ],
 
     sidebar: [
@@ -25,7 +24,14 @@ export default defineConfig({
         items: [
           { text: "¿Qué es Antasoft?", link: "/introduccion/que-es-antasoft" },
           { text: "Arquitectura y tecnologías", link: "/introduccion/arquitectura-tecnologias" },
-        ],
+        ]
+      },
+      {
+        text: "Backend",
+        items: [
+          { text: "Configuración", link: "/backend/configuracion" },
+          { text: "Diagrama entidad-relación", link: "/backend/diagrama-entidad-relacion" },
+        ]
       },
     ],
 
