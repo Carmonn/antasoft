@@ -1,6 +1,5 @@
 import { DataTypes, Model } from "sequelize";
-import { sequelize } from "../config/database.js";
-import { Entidad } from "./Entidad.js";
+import { sequelize } from "../../config/database.js";
 
 export class Municipio extends Model {
   declare cve_ent: number;
@@ -10,14 +9,21 @@ export class Municipio extends Model {
 
 Municipio.init(
   {
-    cve_ent: {
+    id: {
       type: DataTypes.INTEGER.UNSIGNED,
       primaryKey: true,
       allowNull: false,
     },
+    estado_id: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+    },
+    cve_ent: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+    },
     cve_mun: {
       type: DataTypes.INTEGER.UNSIGNED,
-      primaryKey: true,
       allowNull: false,
     },
     nombre: {
@@ -31,15 +37,3 @@ Municipio.init(
     timestamps: false,
   },
 );
-
-// Relación
-Municipio.belongsTo(Entidad, {
-  foreignKey: "cve_ent",
-  targetKey: "cve_ent",
-  as: "entidad",
-});
-Entidad.hasMany(Municipio, {
-  foreignKey: "cve_ent",
-  sourceKey: "cve_ent",
-  as: "municipios",
-});

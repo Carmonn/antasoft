@@ -1,18 +1,23 @@
 import { DataTypes, Model } from "sequelize";
-import { sequelize } from "../config/database.js";
+import { sequelize } from "../../config/database.js";
 
-export class Entidad extends Model {
+export class Estado extends Model {
   declare cve_ent: number;
   declare nombre: string;
   declare abreviatura: string | null;
 }
 
-Entidad.init(
+Estado.init(
   {
-    cve_ent: {
+    id: {
       type: DataTypes.INTEGER.UNSIGNED,
       primaryKey: true,
       allowNull: false,
+    },
+    cve_ent: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false,
+      unique: true,
     },
     nombre: {
       type: DataTypes.STRING(20),
@@ -27,7 +32,7 @@ Entidad.init(
   },
   {
     sequelize,
-    tableName: "entidades",
+    tableName: "estados",
     timestamps: false,
   },
 );
