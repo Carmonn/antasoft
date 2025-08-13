@@ -1,7 +1,7 @@
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
-import entidadRoutes from "./routes/entidadRoutes.js";
-import municipioRoutes from "./routes/municipioRoutes.js";
+import entidadRoutes from "./routes/entidad.routes.js";
+import municipioRoutes from "./routes/municipio.routes.js";
 
 const app = new Hono();
 

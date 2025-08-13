@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { EntidadController } from "../controllers/EntidadController.js";
+import { EntidadController } from "../controllers/entidad.controller.js";
 
 const entidadRoutes = new Hono();
 

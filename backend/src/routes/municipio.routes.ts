@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { MunicipioController } from "../controllers/MunicipioController.js";
+import { MunicipioController } from "../controllers/municipio.controller.js";
 
 const municipioRoutes = new Hono();
 
