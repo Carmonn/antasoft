@@ -15,6 +15,8 @@ import {
   UsuarioPermiso,
 } from "./usuarios/index.js";
 
+import { Clave, Cliente, Sucursal, TipoClave } from "./sucursales/index.js";
+
 export {
   Estado,
   Municipio,
@@ -27,4 +29,8 @@ export {
   RolPermiso,
   Usuario,
   UsuarioPermiso,
+  Clave,
+  Cliente,
+  Sucursal,
+  TipoClave,
 };
