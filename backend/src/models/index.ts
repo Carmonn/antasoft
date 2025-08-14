@@ -1,4 +1,5 @@
 import { Estado, Municipio } from "./divisionTerritorial/index.js";
+
 import {
   TipoContacto,
   Contacto,
@@ -6,4 +7,24 @@ import {
   PersonaMunicipio,
 } from "./personas/index.js";
 
-export { Estado, Municipio, TipoContacto, Contacto, Persona, PersonaMunicipio };
+import {
+  Permiso,
+  Rol,
+  RolPermiso,
+  Usuario,
+  UsuarioPermiso,
+} from "./usuarios/index.js";
+
+export {
+  Estado,
+  Municipio,
+  TipoContacto,
+  Contacto,
+  Persona,
+  PersonaMunicipio,
+  Permiso,
+  Rol,
+  RolPermiso,
+  Usuario,
+  UsuarioPermiso,
+};
