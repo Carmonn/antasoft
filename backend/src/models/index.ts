@@ -3,8 +3,9 @@ import { Municipio } from "./divisionTerritorial/Municipio.js";
 import { TipoContacto } from "./personas/TipoContacto.js";
 import { Contacto } from "./personas/Contacto.js";
 import { Persona } from "./personas/Persona.js";
+import { PersonaMunicipio } from "./personas/PersonaMunicipio.js";
 
-// Estados-Municipios
+// Estados-Municipios (divisionTerritorial)
 // ------------------
 // Cada estado puede tener muchos municipios
 Estado.hasMany(Municipio, {
@@ -21,7 +22,7 @@ Municipio.belongsTo(Estado, {
   onUpdate: "CASCADE",
 });
 
-// Contacto-TipoContacto-Persona
+// Contacto-TipoContacto-Persona-PersonaMunicipio (personas)
 // -----------------------------
 // Un tipo de contacto puede tener muchos contactos
 TipoContacto.hasMany(Contacto, {
@@ -41,15 +42,29 @@ Contacto.belongsTo(TipoContacto, {
 Persona.hasMany(Contacto, {
   foreignKey: "persona_id",
   as: "contactos",
-  onDelete: "RESTRICT",
+  onDelete: "CASCADE",
   onUpdate: "CASCADE",
 });
 // Cada contacto pertenece a una persona
 Contacto.belongsTo(Persona, {
   foreignKey: "persona_id",
   as: "persona",
-  onDelete: "RESTRICT",
+  onDelete: "CASCADE",
+  onUpdate: "CASCADE",
+});
+// Cada persona puede estar asociada a muchos personaMunicipios
+Persona.hasMany(PersonaMunicipio, {
+  foreignKey: "persona_id",
+  as: "personaMunicipios",
+  onDelete: "CASCADE",
+  onUpdate: "CASCADE",
+});
+// Cada personaMunicipio pertenece a una persona
+PersonaMunicipio.belongsTo(Persona, {
+  foreignKey: "persona_id",
+  as: "persona",
+  onDelete: "CASCADE",
   onUpdate: "CASCADE",
 });
 
-export { Estado, Municipio, TipoContacto, Contacto, Persona };
+export { Estado, Municipio, TipoContacto, Contacto, Persona, PersonaMunicipio };
