@@ -1,5 +1,5 @@
-import { Estado } from "./localidad/Estado.js";
-import { Municipio } from "./localidad/Municipio.js";
+import { Estado } from "./divisionTerritorial/Estado.js";
+import { Municipio } from "./divisionTerritorial/Municipio.js";
 
 // Estados-Municipios
 Estado.hasMany(Municipio, {
