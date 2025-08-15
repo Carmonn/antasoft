@@ -3,6 +3,12 @@ import { h } from "vue";
 import type { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import "./style.css";
+import 'vuetify/styles'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+import { createVuetify } from 'vuetify'
+
+const vuetify = createVuetify({ components, directives })
 
 export default {
   extends: DefaultTheme,
@@ -12,6 +18,6 @@ export default {
     });
   },
   enhanceApp({ app, router, siteData }) {
-    // ...
+    app.use(vuetify);
   },
 } satisfies Theme;
