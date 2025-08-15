@@ -40,19 +40,10 @@ src="../assets/img/entidad-relacion/Sucursales.svg"
 alt="Diagrama"
 />
 
-4. Entidades y Municipios
+4. Division territorial
    - Permite identificar geográficamente la ubicación de objetos o sucursales.
 
 <ImgContenedor
 src="../assets/img/entidad-relacion/Municipios.svg"
-alt="Diagrama"
-/>
-
-5. Gestores
-   - Relaciona qué zona geográfica atiende cada persona.
-   - Importante: Los gestores no son usuarios del sistema; son personas en campo que pueden ser contactadas para realizar trabajos.
-
-<ImgContenedor
-src="../assets/img/entidad-relacion/Gestores.svg"
 alt="Diagrama"
 />
