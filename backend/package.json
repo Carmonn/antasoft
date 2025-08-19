@@ -10,10 +10,10 @@
     "start": "node dist/index.js",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
-    "cm": "npm --prefix ../ run cm",
-    "begin": "npm install"
+    "cm": "npm --prefix ../ run cm"
   },
   "dependencies": {
+    "@antasoft/shared": "*",
     "@hono/node-server": "^1.17.1",
     "dotenv": "^17.2.1",
     "hono": "^4.8.10",

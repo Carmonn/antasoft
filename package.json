@@ -2,21 +2,22 @@
   "name": "antasoft",
   "version": "1.0.0",
   "type": "module",
-  "directories": {
-    "doc": "docs"
-  },
+  "author": "Luis Enrique Carmona Beltran (GitHub: Carmonn)",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "docs",
+    "shared"
+  ],
   "scripts": {
     "cm": "cz",
     "prepare": "husky install",
-    "begin": "npm install && npm run prepare && npm run begin_frontend && npm run begin_backend && npm run begin_docs",
-    "begin_frontend": "npm --prefix frontend run begin",
-    "begin_backend": "npm --prefix backend run begin",
-    "begin_docs": "npm --prefix docs run begin"
+    "begin": "npm install && npm run prepare",
+    "begin_frontend": "npm --workspace frontend run begin",
+    "begin_backend": "npm --workspace backend run begin",
+    "begin_docs": "npm --workspace docs run begin"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "commitizen": "^4.3.1",
@@ -30,12 +31,10 @@
       "npm --prefix frontend run format",
       "npm --prefix frontend run lint"
     ],
-
     "backend/src/**/*.{js,ts}": [
       "npm --prefix backend run format",
       "npm --prefix backend run lint"
     ],
-
     "docs/src/**/*.{js,ts,vue,md}": [
       "npm --prefix docs run format",
       "npm --prefix docs run lint"
@@ -83,5 +82,8 @@
         }
       }
     }
+  },
+  "dependencies": {
+    "zod": "^4.0.17"
   }
 }
