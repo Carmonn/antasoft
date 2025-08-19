@@ -51,7 +51,7 @@
         },
         "fix": {
           "description": "Corregir errores que afectan el funcionamiento",
-          "emoji": "🐞"
+          "emoji": "🐛"
         },
         "docs": {
           "description": "Actualizar o mejorar la documentación",
