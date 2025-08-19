@@ -1,7 +1,5 @@
 import { DataTypes, Model } from "sequelize";
 import { sequelize } from "../../config/database.js";
-import { TipoClave } from "./TipoClave.js";
-import { Sucursal } from "./Sucursal.js";
 
 export class Clave extends Model {
   declare id: number;
@@ -37,16 +35,3 @@ Clave.init(
     timestamps: false,
   },
 );
-
-Clave.belongsTo(TipoClave, {
-  foreignKey: "tipo_clave_id",
-  as: "tipo_clave",
-  onDelete: "RESTRICT",
-  onUpdate: "CASCADE",
-});
-Clave.belongsTo(Sucursal, {
-  foreignKey: "sucursal_id",
-  as: "sucursal",
-  onDelete: "CASCADE",
-  onUpdate: "CASCADE",
-});

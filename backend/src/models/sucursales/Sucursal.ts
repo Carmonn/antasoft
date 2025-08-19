@@ -1,7 +1,5 @@
 import { DataTypes, Model } from "sequelize";
 import { sequelize } from "../../config/database.js";
-import { Cliente } from "./Cliente.js";
-import { Municipio } from "../divisionTerritorial/Municipio.js";
 
 export class Sucursal extends Model {
   declare id: number;
@@ -42,16 +40,3 @@ Sucursal.init(
     timestamps: false,
   },
 );
-
-Sucursal.belongsTo(Cliente, {
-  foreignKey: "cliente_id",
-  as: "cliente",
-  onDelete: "RESTRICT",
-  onUpdate: "CASCADE",
-});
-Sucursal.belongsTo(Municipio, {
-  foreignKey: "municipio_id", // solo enlaza una columna
-  as: "municipio",
-  onDelete: "RESTRICT",
-  onUpdate: "CASCADE",
-});

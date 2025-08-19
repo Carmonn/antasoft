@@ -1,7 +1,5 @@
 import { DataTypes, Model } from "sequelize";
 import { sequelize } from "../../config/database.js";
-import { Rol } from "./Rol.js";
-import { Persona } from "../personas/Persona.js";
 
 export class Usuario extends Model {
   declare id: number;
@@ -48,16 +46,3 @@ Usuario.init(
     timestamps: false,
   },
 );
-
-Usuario.belongsTo(Rol, {
-  foreignKey: "rol_id",
-  as: "rol",
-  onDelete: "RESTRICT",
-  onUpdate: "CASCADE",
-});
-Usuario.belongsTo(Persona, {
-  foreignKey: "persona_id",
-  as: "persona",
-  onDelete: "RESTRICT",
-  onUpdate: "CASCADE",
-});
