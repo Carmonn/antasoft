@@ -31,6 +31,8 @@ export default defineConfig({
         items: [
           { text: "Configuración", link: "/backend/configuracion" },
           { text: "Diagrama entidad-relación", link: "/backend/diagrama-entidad-relacion" },
+          { text: "Autenticación", link: "/backend/autenticacion" },
+          { text: "Manejo de errores", link: "/backend/manejo-errores" }
         ]
       },
     ],
